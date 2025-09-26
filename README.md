@@ -6,13 +6,14 @@ Hands-on Reinforcement Learning with problems:
 
 All the methods in this repository are **implementations or approximations of the Bellman equation**. 
 
-The Bellman equation expresses the value of a state as the expected return from taking an action and following a policy from that point on. 
+The Bellman equation expresses (1) the value of a state as the expected return from taking an action and (2) following a policy thereafter. 
 
+<p align="center">
 $` V(s) = max_a [ R(s,a) + γ Σ_{s'} P(s'|s,a) V(s') ] `$
+</p>
 
----
 
-### **Dynamic Programming**
+### 1. **Dynamic Programming**
 
 - **policy_iteration.py**
   - **Equation:**  
@@ -34,7 +35,7 @@ $` V(s) = \max_a \sum_{s'} P(s'|s,a) [ R(s,a,s') + \gamma V(s') ] `$
 
 ---
 
-### **Free Model Control**
+### 2. **Free Model Control**
 
 - **q_learning.py**
   - **Equation:**  
@@ -56,7 +57,7 @@ $` Q(s_t, a_t) <- Q(s_t, a_t) + \alpha [ r_{t+1} + \gamma Q(s_{t+1}, a_{t+1}) - 
 
 ---
 
-### **Free Model Prediction**
+### 3. **Free Model Prediction**
 
 - **mc_prediction.py**
   - **Equation:**  
@@ -78,7 +79,7 @@ $` V(s_t) <- V(s_t) + \alpha [ r_{t+1} + \gamma V(s_{t+1}) - V(s_t) ] `$
 
 ---
 
-### **Value Function Approximation Control**
+### 4. **Value Function Approximation Control**
 
 - **linear_q_learning.py**
   - **Equation:**  
@@ -100,7 +101,7 @@ $` Q(s,a) ≈ f_θ(s,a) `$
 
 ---
 
-### **Value Function Approximation Prediction**
+### 5. **Value Function Approximation Prediction**
 
 - **linear_value_prediction.py**
   - **Equation:**  
