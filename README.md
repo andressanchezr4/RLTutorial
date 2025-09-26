@@ -35,29 +35,7 @@ $` V(s) = \max_a \sum_{s'} P(s'|s,a) [ R(s,a,s') + \gamma V(s') ] `$
 
 ---
 
-### 2. **Free Model Control**
-
-- **q_learning.py**
-  - **Equation:**  
-$` Q(s_t, a_t) <- Q(s_t, a_t) + \alpha [ r_{t+1} + \gamma max_a Q(s_{t+1}, a) - Q(s_t, a_t) ] `$
-  - Off-policy Learning.
-  - Temporal Difference (TD) Learning.
-  - Exploration vs. Exploitation.
-  - Q-value Updates.
-  - Policy Improvement Strategies.
-
-- **sarsa.py**
-  - **Equation:**  
-$` Q(s_t, a_t) <- Q(s_t, a_t) + \alpha [ r_{t+1} + \gamma Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t) ] `$
-  - On-policy Learning.
-  - Temporal Difference (TD) Learning.
-  - Exploration vs. Exploitation.
-  - Q-value Updates.
-  - Policy Improvement Strategies.
-
----
-
-### 3. **Free Model Prediction**
+### 2. **Free Model Prediction**
 
 - **mc_prediction.py**
   - **Equation:**  
@@ -79,7 +57,51 @@ $` V(s_t) <- V(s_t) + \alpha [ r_{t+1} + \gamma V(s_{t+1}) - V(s_t) ] `$
 
 ---
 
-### 4. **Value Function Approximation Control**
+### 3. **Free Model Control**
+
+- **q_learning.py**
+  - **Equation:**  
+$` Q(s_t, a_t) <- Q(s_t, a_t) + \alpha [ r_{t+1} + \gamma max_a Q(s_{t+1}, a) - Q(s_t, a_t) ] `$
+  - Off-policy Learning.
+  - Temporal Difference (TD) Learning.
+  - Exploration vs. Exploitation.
+  - Q-value Updates.
+  - Policy Improvement Strategies.
+
+- **sarsa.py**
+  - **Equation:**  
+$` Q(s_t, a_t) <- Q(s_t, a_t) + \alpha [ r_{t+1} + \gamma Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t) ] `$
+  - On-policy Learning.
+  - Temporal Difference (TD) Learning.
+  - Exploration vs. Exploitation.
+  - Q-value Updates.
+  - Policy Improvement Strategies.
+
+---
+
+### 4. **Value Function Approximation Prediction**
+
+- **linear_value_prediction.py**
+  - **Equation:**  
+$` V(s) ≈ θ^T φ(s) `$
+  - Linear Function Approximation.
+  - Feature Engineering.
+  - Gradient Descent Optimization.
+  - Overfitting Prevention.
+  - Convergence Analysis.
+
+- **neural_network_value.py**
+  - **Equation:**  
+$` V(s) ≈ f_θ(s) `$
+  - Neural Network Function Approximation.
+  - Deep Value Networks.
+  - Loss Function Design.
+  - Regularization Techniques.
+  - Hyperparameter Tuning.
+
+---
+
+### 5. **Value Function Approximation Control**
 
 - **linear_q_learning.py**
   - **Equation:**  
@@ -99,24 +121,4 @@ $` Q(s,a) ≈ f_θ(s,a) `$
   - Target Networks.
   - Loss Function Design.
 
----
 
-### 5. **Value Function Approximation Prediction**
-
-- **linear_value_prediction.py**
-  - **Equation:**  
-$` V(s) ≈ θ^T φ(s) `$
-  - Linear Function Approximation.
-  - Feature Engineering.
-  - Gradient Descent Optimization.
-  - Overfitting Prevention.
-  - Convergence Analysis.
-
-- **neural_network_value.py**
-  - **Equation:**  
-$` V(s) ≈ f_θ(s) `$
-  - Neural Network Function Approximation.
-  - Deep Value Networks.
-  - Loss Function Design.
-  - Regularization Techniques.
-  - Hyperparameter Tuning.
