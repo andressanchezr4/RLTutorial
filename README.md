@@ -121,4 +121,34 @@ $` Q(s,a) ≈ f_θ(s,a) `$
   - Target Networks.
   - Loss Function Design.
 
+---
+
+### 5. **Value Function Approximation Control**
+
+- **Finite Difference**
+  - **Equation:**  
+$` Q(s,a) ≈ θ^T φ(s,a) `$
+  - Linear Function Approximation.
+  - Feature Engineering.
+  - Gradient Descent Optimization.
+  - Overfitting Prevention.
+  - Experience Replay.
+
+- **REINFORCE**
+  - **Equation:**  
+$` Q(s,a) ≈ θ^T φ(s,a) `$
+  - Linear Function Approximation.
+  - Feature Engineering.
+  - Gradient Descent Optimization.
+  - Overfitting Prevention.
+  - Experience Replay.
+
+- **Actor-Critic**
+  - **Equation:**  
+$` Q(s,a) ≈ θ^T φ(s,a) `$
+  - Linear Function Approximation.
+  - Feature Engineering.
+  - Gradient Descent Optimization.
+  - Overfitting Prevention.
+  - Experience Replay.
 
