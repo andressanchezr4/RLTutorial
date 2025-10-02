@@ -9,8 +9,10 @@ All the methods in this repository are **implementations or approximations of th
 The Bellman equation expresses (1) the value of a state as the expected return from taking an action and (2) following a policy thereafter. 
 
 <p align="center">
+  
 $` V(s) = max_a [ R(s,a) + γ Σ_{s'} P(s'|s,a) V(s') ] `$
 </p>
+
 
 
 ### 1. **Dynamic Programming**
